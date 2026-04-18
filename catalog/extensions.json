@@ -1,0 +1,64 @@
+{
+  "schema": "https://serenorg.github.io/dispatch/schemas/extension-catalog.v1.json",
+  "repository": "dispatch-courier-seren-cloud",
+  "generated_at": "2026-04-18T00:00:00Z",
+  "entries": [
+    {
+      "name": "seren-cloud",
+      "display_name": "Seren Cloud Courier",
+      "kind": "courier",
+      "version": "0.1.0",
+      "description": "Remote courier for Seren Cloud parcel execution. Accepts generic dispatch/custom courier targets and forwards session, run, and shutdown operations to the Seren Cloud API.",
+      "protocol": "jsonl",
+      "protocol_version": 1,
+      "source_dir": ".",
+      "manifest_path": "courier-plugin.json",
+      "manifest_url": "https://raw.githubusercontent.com/serenorg/dispatch-courier-seren-cloud/v0.1.0/courier-plugin.json",
+      "keywords": ["dispatch", "courier", "seren", "cloud", "remote"],
+      "tags": ["courier", "remote", "seren-cloud"],
+      "install_hint": "dispatch extension install seren-cloud",
+      "source": {
+        "type": "github_release",
+        "repo": "serenorg/dispatch-courier-seren-cloud",
+        "tag": "v0.1.0",
+        "checksum_asset": "SHA256SUMS.txt",
+        "binaries": [
+          {
+            "target": "aarch64-apple-darwin",
+            "asset": "dispatch-courier-seren-cloud-aarch64-apple-darwin",
+            "binary_name": "dispatch-courier-seren-cloud"
+          },
+          {
+            "target": "x86_64-apple-darwin",
+            "asset": "dispatch-courier-seren-cloud-x86_64-apple-darwin",
+            "binary_name": "dispatch-courier-seren-cloud"
+          },
+          {
+            "target": "aarch64-unknown-linux-gnu",
+            "asset": "dispatch-courier-seren-cloud-aarch64-unknown-linux-gnu",
+            "binary_name": "dispatch-courier-seren-cloud"
+          },
+          {
+            "target": "x86_64-unknown-linux-gnu",
+            "asset": "dispatch-courier-seren-cloud-x86_64-unknown-linux-gnu",
+            "binary_name": "dispatch-courier-seren-cloud"
+          },
+          {
+            "target": "x86_64-pc-windows-msvc",
+            "asset": "dispatch-courier-seren-cloud-x86_64-pc-windows-msvc.exe",
+            "binary_name": "dispatch-courier-seren-cloud.exe"
+          }
+        ]
+      },
+      "auth": {
+        "method": "manual",
+        "provider": "Seren Cloud"
+      },
+      "requirements": {
+        "secrets": ["SEREN_API_KEY"],
+        "optional_secrets": ["SEREN_API_BASE"],
+        "network_domains": ["api.serendb.com"]
+      }
+    }
+  ]
+}

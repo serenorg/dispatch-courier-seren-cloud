@@ -1,0 +1,21 @@
+[package]
+name = "dispatch-courier-seren-cloud"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Dispatch courier plugin for Seren Cloud remote execution."
+repository = "https://github.com/serenorg/dispatch-courier-seren-cloud"
+keywords = ["dispatch", "courier", "seren-cloud", "agents"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "dispatch-courier-seren-cloud"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+dispatch-channel-protocol = { git = "https://github.com/serenorg/dispatch", tag = "v0.3.0" }
+dispatch-courier-protocol = { git = "https://github.com/serenorg/dispatch", tag = "v0.3.0" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ureq = { version = "3", features = ["json"] }

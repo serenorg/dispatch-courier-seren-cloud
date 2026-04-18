@@ -1,0 +1,12 @@
+{
+  "kind": "courier",
+  "name": "seren-cloud",
+  "version": "0.1.0",
+  "protocol_version": 1,
+  "transport": "jsonl",
+  "description": "Remote courier for Seren Cloud agent execution.",
+  "exec": {
+    "command": "./target/release/dispatch-courier-seren-cloud",
+    "args": []
+  }
+}
